@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB83885E-B261-41DB-8187-678BC8B5499B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ezBet2</RootNamespace>
+    <AssemblyName>ezBet2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>csgl_s.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Moonmile.ExDocPcl.Html">
+      <HintPath>..\packages\Moonmile.ExDoc.Html.1.1\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Moonmile.ExDocPcl.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Moserware.Skills">
+      <HintPath>..\packages\Moserware.Skills.1.0.0.1\lib\net35\Moserware.Skills.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MatchListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SimpleJSON.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MatchListBox.resx">
+      <DependentUpon>MatchListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ezBet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="text files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3DMAX.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAZ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chiefs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPlay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dignitas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eLevate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnVyUs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ESC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fenix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlyingV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fnatic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FSid3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GGWP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GPlay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KFish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LDLC.Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LDLC.White.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LGB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lunatik.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\myXMG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NaVi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nEophyte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nihilum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NiP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orbit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Piter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Publiclir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reason.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SKDC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpaceS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SYN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tricked.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TSM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VOX.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x6tence.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotFound.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="csgl_s.ico" />
+    <Content Include="License.txt" />
+    <Content Include="README.txt" />
+    <None Include="Resources\ChevronRight.png" />
+    <None Include="Resources\ChevronLeft.png" />
+    <None Include="Resources\XPC_D.jpg" />
+    <None Include="Resources\XPC.jpg" />
+    <None Include="Resources\USSR_D.jpg" />
+    <None Include="Resources\USSR.jpg" />
+    <None Include="Resources\AT_D.jpg" />
+    <None Include="Resources\AT.jpg" />
+    <None Include="Resources\Wrecking_D.jpg" />
+    <None Include="Resources\Wrecking.jpg" />
+    <None Include="Resources\neXtP_D.jpg" />
+    <None Include="Resources\neXtP.jpg" />
+    <None Include="Resources\vVv_D.jpg" />
+    <None Include="Resources\vVv.jpg" />
+    <None Include="Resources\TStorm_D.jpg" />
+    <None Include="Resources\TStorm.jpg" />
+    <None Include="Resources\Noble_D.jpg" />
+    <None Include="Resources\Noble.jpg" />
+    <None Include="Resources\lounger.gif" />
+    <None Include="Resources\mS_D.jpg" />
+    <None Include="Resources\mS.jpg" />
+    <None Include="Resources\mouz_D.jpg" />
+    <None Include="Resources\mouz.jpg" />
+    <None Include="Resources\csgl_s_D.jpg" />
+    <None Include="Resources\csgl_s.ico" />
+    <None Include="Resources\lounger.png" />
+    <None Include="Resources\xGame_D.jpg" />
+    <None Include="Resources\x6tence_D.jpg" />
+    <None Include="Resources\VP_D.jpg" />
+    <None Include="Resources\VOX_D.jpg" />
+    <None Include="Resources\Vega_D.jpg" />
+    <None Include="Resources\TSM_D.jpg" />
+    <None Include="Resources\Tricked_D.jpg" />
+    <None Include="Resources\Titan_D.jpg" />
+    <None Include="Resources\TA_D.jpg" />
+    <None Include="Resources\SYN_D.jpg" />
+    <None Include="Resources\SpaceS_D.jpg" />
+    <None Include="Resources\SKDC_D.jpg" />
+    <None Include="Resources\Reason_D.jpg" />
+    <None Include="Resources\Publiclir_D.jpg" />
+    <None Include="Resources\Property_D.jpg" />
+    <None Include="Resources\Piter_D.jpg" />
+    <None Include="Resources\Penta_D.jpg" />
+    <None Include="Resources\Orbit_D.jpg" />
+    <None Include="Resources\NotFound_D.jpg" />
+    <None Include="Resources\NiP_D.jpg" />
+    <None Include="Resources\Nihilum_D.jpg" />
+    <None Include="Resources\nEophyte_D.jpg" />
+    <None Include="Resources\NaVi_D.jpg" />
+    <None Include="Resources\myXMG_D.jpg" />
+    <None Include="Resources\M5_D.jpg" />
+    <None Include="Resources\Lunatik_D.jpg" />
+    <None Include="Resources\Liquid_D.jpg" />
+    <None Include="Resources\Lions_D.jpg" />
+    <None Include="Resources\LGB_D.jpg" />
+    <None Include="Resources\LG_D.jpg" />
+    <None Include="Resources\LDLC.White_D.jpg" />
+    <None Include="Resources\LDLC.Blue_D.jpg" />
+    <None Include="Resources\KFish_D.jpg" />
+    <None Include="Resources\KeyD_D.jpg" />
+    <None Include="Resources\Imm_D.jpg" />
+    <None Include="Resources\HR_D.jpg" />
+    <None Include="Resources\GPlay_D.jpg" />
+    <None Include="Resources\GGWP_D.jpg" />
+    <None Include="Resources\G2_D.jpg" />
+    <None Include="Resources\FSid3_D.jpg" />
+    <None Include="Resources\Fnatic_D.jpg" />
+    <None Include="Resources\FlyingV_D.jpg" />
+    <None Include="Resources\Fenix_D.jpg" />
+    <None Include="Resources\ESC_D.jpg" />
+    <None Include="Resources\EnVyUs_D.jpg" />
+    <None Include="Resources\eLevate_D.jpg" />
+    <None Include="Resources\Dignitas_D.jpg" />
+    <None Include="Resources\CW_D.jpg" />
+    <None Include="Resources\CPlay_D.jpg" />
+    <None Include="Resources\Cloud9_D.jpg" />
+    <None Include="Resources\CLG_D.jpg" />
+    <None Include="Resources\Chiefs_D.jpg" />
+    <None Include="Resources\CAZ_D.jpg" />
+    <None Include="Resources\AG_D.jpg" />
+    <None Include="Resources\Aces_D.jpg" />
+    <None Include="Resources\A51_D.jpg" />
+    <None Include="Resources\3DMAX_D.jpg" />
+    <None Include="Resources\Vega.jpg" />
+    <None Include="Resources\TA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Swolepoints\Swolepoints.csproj">
+      <Project>{9e01e70c-fac3-4242-9975-ecbaf61953ca}</Project>
+      <Name>Swolepoints</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
